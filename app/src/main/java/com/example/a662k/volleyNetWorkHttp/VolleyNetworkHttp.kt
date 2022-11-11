@@ -34,8 +34,8 @@ class VolleyNetworkHttp {
             val stringRequest = object : StringRequest(
                 Method.GET, server(api),
                 Response.Listener { response ->
-                    Logger.d(TAG, response)
-                    volleyHandler.onSuccess(response)
+                    Logger.d(TAG, response.toString())
+                    volleyHandler.onSuccess(response.toString())
                 },
                 Response.ErrorListener { error ->
                     Logger.d(TAG, error.toString())
@@ -54,8 +54,8 @@ class VolleyNetworkHttp {
             val stringRequest = object : StringRequest(
                 Method.GET, server(api),
                 Response.Listener { response ->
-                    Logger.d(TAG, response)
-                    volleyHandler.onSuccess(response)
+                    Logger.d(TAG, response.toString())
+                    volleyHandler.onSuccess(response.toString())
                 },
                 Response.ErrorListener { error ->
                     Logger.d(TAG, error.toString())
@@ -73,8 +73,8 @@ class VolleyNetworkHttp {
             val stringRequest = object : StringRequest(
                 Method.POST, server(api),
                 Response.Listener { response ->
-                    Logger.d(TAG, response)
-                    volleyHandler.onSuccess(response)
+                    Logger.d(TAG, response.toString())
+                    volleyHandler.onSuccess(response.toString())
                 },
                 Response.ErrorListener { error ->
                     Logger.d(TAG, error.toString())
@@ -96,8 +96,8 @@ class VolleyNetworkHttp {
             val stringRequest = object : StringRequest(
                 Method.PUT, server(api),
                 Response.Listener { response ->
-                    Logger.d(TAG, response)
-                    volleyHandler.onSuccess(response)
+                    Logger.d(TAG, response.toString())
+                    volleyHandler.onSuccess(response.toString())
                 },
                 Response.ErrorListener { error ->
                     Logger.d(TAG, error.toString())
@@ -118,8 +118,8 @@ class VolleyNetworkHttp {
             val stringRequest = object : StringRequest(
                 Method.DELETE, server(api),
                 Response.Listener { response ->
-                    Logger.d(TAG, response)
-                    volleyHandler.onSuccess(response)
+                    Logger.d(TAG, response.toString())
+                    volleyHandler.onSuccess(response.toString())
                 },
                 Response.ErrorListener { error ->
                     Logger.d(TAG, error.toString())
@@ -140,7 +140,7 @@ class VolleyNetworkHttp {
 
         fun paramsCreate(employee: Employee): HashMap<String, Any> {
             val params = HashMap<String, Any>()
-            //params["id"]
+
             params["employee_name"] = employee.employee_name
             params["employee_salary"] = employee.employee_salary
             params["employee_age"] = employee.employee_age

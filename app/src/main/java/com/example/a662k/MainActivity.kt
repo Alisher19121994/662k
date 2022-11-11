@@ -5,6 +5,7 @@ import android.os.Bundle
 import com.example.a662k.models.Employee
 import com.example.a662k.volleyNetWorkHttp.VolleyHandler
 import com.example.a662k.volleyNetWorkHttp.VolleyNetworkHttp
+import com.google.gson.Gson
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,11 +22,11 @@ class MainActivity : AppCompatActivity() {
         val employeePOST = Employee(88, "Alisher Daminov", 770000, 98, "")
         val employeePUT = Employee(122, "Alisherbek", 8888000, 7, "")
 
-        apiVolleyList()
-        //apiVolleySingle(employee)
+        //apiVolleyList()
+       // apiVolleySingle(employee)
         //apiVolleyPost(employeePOST)
         //apiVolleyPut(employeePUT)
-        // apiVolleyDelete(employee)
+         apiVolleyDelete(employeePUT)
     }
 
     private fun apiVolleyDelete(employee: Employee) {
